@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { auth } from "@/src/lib/auth";
+import { LogoutButton } from "@/src/components/auth/logout-button";
 
 const roleLabels = {
   ADMIN: "관리자",
@@ -27,9 +28,12 @@ export default async function Home() {
             <p className="text-sm text-muted-foreground">한결물산 ERP</p>
             <h1 className="mt-1 text-2xl font-semibold">대시보드</h1>
           </div>
-          <div className="text-right text-sm">
-            <p className="font-medium">{userName}</p>
-            <p className="text-muted-foreground">{roleLabels[role]}</p>
+          <div className="flex items-center gap-4 text-right text-sm">
+            <div>
+              <p className="font-medium">{userName}</p>
+              <p className="text-muted-foreground">{roleLabels[role]}</p>
+            </div>
+            <LogoutButton />
           </div>
         </header>
 

@@ -175,12 +175,17 @@ export function ItemTable() {
           <p className="mt-1 text-sm text-muted-foreground">상품 정보와 재고 현황을 조회합니다.</p>
         </div>
         {canManageItems ? (
-          <Link
-            href="/items/new"
-            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground"
-          >
-            품목 등록
-          </Link>
+          <div className="flex gap-2">
+            <Link href="/items/upload" className="inline-flex h-10 items-center justify-center rounded-md border px-4 text-sm font-medium">
+              엑셀 이관
+            </Link>
+            <Link
+              href="/items/new"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground"
+            >
+              품목 등록
+            </Link>
+          </div>
         ) : null}
       </div>
 

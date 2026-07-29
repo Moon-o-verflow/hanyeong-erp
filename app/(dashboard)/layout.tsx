@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { auth } from "@/src/lib/auth";
+import { LogoutButton } from "@/src/components/auth/logout-button";
 
 export default async function DashboardLayout({
   children,
@@ -29,6 +30,9 @@ export default async function DashboardLayout({
               사내 발주
             </Link>
           </nav>
+          <div className="ml-auto">
+            <LogoutButton />
+          </div>
         </div>
       </header>
       <main className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">{children}</main>
