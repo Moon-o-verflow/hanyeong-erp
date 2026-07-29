@@ -12,6 +12,9 @@ export default function DashboardLayout({ children }: Readonly<{ children: React
             <Link className="inline-flex h-full items-center border-b-2 border-primary px-3 text-sm font-medium" href="/items">
               품목 관리
             </Link>
+            <Link className="inline-flex h-full items-center px-3 text-sm font-medium" href="/internal-orders">
+              사내 발주
+            </Link>
           </nav>
         </div>
       </header>

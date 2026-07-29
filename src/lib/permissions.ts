@@ -25,6 +25,7 @@ export const actionRoles = {
   "internalOrder.approve": ["ADMIN"],
   "internalOrder.reject": ["ADMIN"],
   "internalOrder.cancel": ["BRANCH"],
+  "internalOrder.approval.cancel": ["ADMIN"],
   "internalOrder.outstanding.read": ["ADMIN", "PURCHASER", "BRANCH"],
   "internalOrder.ship": ["WAREHOUSE"],
   "purchaseOrder.read": ["ADMIN", "PURCHASER", "WAREHOUSE"],
